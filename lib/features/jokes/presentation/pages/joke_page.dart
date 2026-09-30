@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../providers/joke_provider.dart';
+import '../providers/joke_provider.dart';
 import '../widgets/joke_card.dart';
 
 class JokePage extends ConsumerWidget {

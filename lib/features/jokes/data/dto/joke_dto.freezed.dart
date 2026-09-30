@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'joke.dart';
+part of 'joke_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,27 +13,27 @@ part of 'joke.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$Joke {
+mixin _$JokeDto {
   String get type;
   String get setup;
   String get punchline;
   int get id;
 
-  /// Create a copy of Joke
+  /// Create a copy of JokeDto
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $JokeCopyWith<Joke> get copyWith =>
-      _$JokeCopyWithImpl<Joke>(this as Joke, _$identity);
+  $JokeDtoCopyWith<JokeDto> get copyWith =>
+      _$JokeDtoCopyWithImpl<JokeDto>(this as JokeDto, _$identity);
 
-  /// Serializes this Joke to a JSON map.
+  /// Serializes this JokeDto to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Joke &&
+            other is JokeDto &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.setup, setup) || other.setup == setup) &&
             (identical(other.punchline, punchline) ||
@@ -47,26 +47,26 @@ mixin _$Joke {
 
   @override
   String toString() {
-    return 'Joke(type: $type, setup: $setup, punchline: $punchline, id: $id)';
+    return 'JokeDto(type: $type, setup: $setup, punchline: $punchline, id: $id)';
   }
 }
 
 /// @nodoc
-abstract mixin class $JokeCopyWith<$Res> {
-  factory $JokeCopyWith(Joke value, $Res Function(Joke) _then) =
-      _$JokeCopyWithImpl;
+abstract mixin class $JokeDtoCopyWith<$Res> {
+  factory $JokeDtoCopyWith(JokeDto value, $Res Function(JokeDto) _then) =
+      _$JokeDtoCopyWithImpl;
   @useResult
   $Res call({String type, String setup, String punchline, int id});
 }
 
 /// @nodoc
-class _$JokeCopyWithImpl<$Res> implements $JokeCopyWith<$Res> {
-  _$JokeCopyWithImpl(this._self, this._then);
+class _$JokeDtoCopyWithImpl<$Res> implements $JokeDtoCopyWith<$Res> {
+  _$JokeDtoCopyWithImpl(this._self, this._then);
 
-  final Joke _self;
-  final $Res Function(Joke) _then;
+  final JokeDto _self;
+  final $Res Function(JokeDto) _then;
 
-  /// Create a copy of Joke
+  /// Create a copy of JokeDto
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -97,8 +97,8 @@ class _$JokeCopyWithImpl<$Res> implements $JokeCopyWith<$Res> {
   }
 }
 
-/// Adds pattern-matching-related methods to [Joke].
-extension JokePatterns on Joke {
+/// Adds pattern-matching-related methods to [JokeDto].
+extension JokeDtoPatterns on JokeDto {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -113,12 +113,12 @@ extension JokePatterns on Joke {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_Joke value)? $default, {
+    TResult Function(_JokeDto value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _Joke() when $default != null:
+      case _JokeDto() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -140,11 +140,11 @@ extension JokePatterns on Joke {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_Joke value) $default,
+    TResult Function(_JokeDto value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _Joke():
+      case _JokeDto():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -165,11 +165,11 @@ extension JokePatterns on Joke {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_Joke value)? $default,
+    TResult? Function(_JokeDto value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _Joke() when $default != null:
+      case _JokeDto() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -196,7 +196,7 @@ extension JokePatterns on Joke {
   }) {
     final _that = this;
     switch (_that) {
-      case _Joke() when $default != null:
+      case _JokeDto() when $default != null:
         return $default(_that.type, _that.setup, _that.punchline, _that.id);
       case _:
         return orElse();
@@ -223,7 +223,7 @@ extension JokePatterns on Joke {
   ) {
     final _that = this;
     switch (_that) {
-      case _Joke():
+      case _JokeDto():
         return $default(_that.type, _that.setup, _that.punchline, _that.id);
       case _:
         throw StateError('Unexpected subclass');
@@ -249,7 +249,7 @@ extension JokePatterns on Joke {
   ) {
     final _that = this;
     switch (_that) {
-      case _Joke() when $default != null:
+      case _JokeDto() when $default != null:
         return $default(_that.type, _that.setup, _that.punchline, _that.id);
       case _:
         return null;
@@ -259,13 +259,14 @@ extension JokePatterns on Joke {
 
 /// @nodoc
 @JsonSerializable()
-class _Joke implements Joke {
-  const _Joke(
+class _JokeDto implements JokeDto {
+  const _JokeDto(
       {required this.type,
       required this.setup,
       required this.punchline,
       required this.id});
-  factory _Joke.fromJson(Map<String, dynamic> json) => _$JokeFromJson(json);
+  factory _JokeDto.fromJson(Map<String, dynamic> json) =>
+      _$JokeDtoFromJson(json);
 
   @override
   final String type;
@@ -276,17 +277,17 @@ class _Joke implements Joke {
   @override
   final int id;
 
-  /// Create a copy of Joke
+  /// Create a copy of JokeDto
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$JokeCopyWith<_Joke> get copyWith =>
-      __$JokeCopyWithImpl<_Joke>(this, _$identity);
+  _$JokeDtoCopyWith<_JokeDto> get copyWith =>
+      __$JokeDtoCopyWithImpl<_JokeDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$JokeToJson(
+    return _$JokeDtoToJson(
       this,
     );
   }
@@ -295,7 +296,7 @@ class _Joke implements Joke {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Joke &&
+            other is _JokeDto &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.setup, setup) || other.setup == setup) &&
             (identical(other.punchline, punchline) ||
@@ -309,27 +310,27 @@ class _Joke implements Joke {
 
   @override
   String toString() {
-    return 'Joke(type: $type, setup: $setup, punchline: $punchline, id: $id)';
+    return 'JokeDto(type: $type, setup: $setup, punchline: $punchline, id: $id)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$JokeCopyWith<$Res> implements $JokeCopyWith<$Res> {
-  factory _$JokeCopyWith(_Joke value, $Res Function(_Joke) _then) =
-      __$JokeCopyWithImpl;
+abstract mixin class _$JokeDtoCopyWith<$Res> implements $JokeDtoCopyWith<$Res> {
+  factory _$JokeDtoCopyWith(_JokeDto value, $Res Function(_JokeDto) _then) =
+      __$JokeDtoCopyWithImpl;
   @override
   @useResult
   $Res call({String type, String setup, String punchline, int id});
 }
 
 /// @nodoc
-class __$JokeCopyWithImpl<$Res> implements _$JokeCopyWith<$Res> {
-  __$JokeCopyWithImpl(this._self, this._then);
+class __$JokeDtoCopyWithImpl<$Res> implements _$JokeDtoCopyWith<$Res> {
+  __$JokeDtoCopyWithImpl(this._self, this._then);
 
-  final _Joke _self;
-  final $Res Function(_Joke) _then;
+  final _JokeDto _self;
+  final $Res Function(_JokeDto) _then;
 
-  /// Create a copy of Joke
+  /// Create a copy of JokeDto
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -339,7 +340,7 @@ class __$JokeCopyWithImpl<$Res> implements _$JokeCopyWith<$Res> {
     Object? punchline = null,
     Object? id = null,
   }) {
-    return _then(_Joke(
+    return _then(_JokeDto(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable

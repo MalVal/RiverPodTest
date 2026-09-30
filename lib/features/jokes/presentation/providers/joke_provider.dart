@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../dto/joke.dart';
-import '../repositories/joke_repository.dart';
-import '../repositories/joke_repository_dio.dart';
+import '../../data/models/Joke.dart';
+import '../../data/repositories/joke_repository_dio.dart';
+import '../../domain/repositories/joke_repository.dart';
 
 final dioProvider = Provider<Dio>((ref) {
   return Dio();

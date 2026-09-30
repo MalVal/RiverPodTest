@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../dto/joke.dart';
+import '../../data/models/Joke.dart';
 
 class JokeCard extends StatelessWidget {
   const JokeCard({
